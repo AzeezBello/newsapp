@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['newsapp-najw.onrender.com', 'https://my-news-app-gy7u.onrender.com']
+ALLOWED_HOSTS = ['newsapp-najw.onrender.com', 'my-news-app-gy7u.onrender.com']
 
 
 # Load the API key from environment variables
