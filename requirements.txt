@@ -1,0 +1,30 @@
+# Core dependencies
+Django>=4.2,<5.0
+djangorestframework>=3.14.0
+django-cors-headers>=3.14.0
+Pillow>=9.0.0
+
+# Deployment dependencies
+gunicorn>=20.1.0
+whitenoise>=6.4.0
+
+# Database dependencies (use the one appropriate for your setup)
+psycopg2>=2.9.6  # PostgreSQL
+# mysqlclient>=2.1.1  # Uncomment if you're using MySQL
+# dj-database-url>=0.5.0  # For handling DATABASE_URL in production
+
+# Optional packages (depending on your use case)
+python-decouple>=3.8  # For managing environment variables
+django-environ>=0.10.0  # Alternative for environment variable management
+requests>=2.28.0  # For making API calls
+
+# Testing dependencies
+pytest>=7.4.0
+pytest-django>=4.5.2
+
+# Linting/Formatting tools (optional for development)
+black>=23.0
+flake8>=6.1.0
+
+# Use this for compatibility
+setuptools>=65.5.0
