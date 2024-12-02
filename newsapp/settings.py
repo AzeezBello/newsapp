@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['newsapp-najw.onrender.com', 'my-news-app-gy7u.onrender.com']
+ALLOWED_HOSTS = ['newsapp-najw.onrender.com', 'https://radiant-naiad-e03ca9.netlify.app']
 
 
 # Load the API key from environment variables
@@ -73,7 +73,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
+    'http://localhost:3000', 'https://radiant-naiad-e03ca9.netlify.app/'
 ]
 
 ROOT_URLCONF = 'newsapp.urls'
