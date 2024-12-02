@@ -73,7 +73,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', 'https://radiant-naiad-e03ca9.netlify.app/'
+    'http://localhost:3000', 'https://radiant-naiad-e03ca9.netlify.app'
 ]
 
 ROOT_URLCONF = 'newsapp.urls'
