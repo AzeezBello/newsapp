@@ -72,9 +72,16 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', 'https://674f013303f72c0008f3ec6c--radiant-naiad-e03ca9.netlify.app'
+CORS_ALLOWED_ORIGINS = [ 
+    'http://localhost:3000',
+    'https://674f013303f72c0008f3ec6c--radiant-naiad-e03ca9.netlify.app',
+    'https://radiant-naiad-e03ca9.netlify.app',  # Your Netlify domain
+    'https://newsapp-najw.onrender.com',        # Your API's own domain
 ]
+
+# Optional: Allow credentials if necessary
+CORS_ALLOW_CREDENTIALS = True
+
 
 ROOT_URLCONF = 'newsapp.urls'
 
