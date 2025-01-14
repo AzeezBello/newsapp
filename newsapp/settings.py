@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['newsapp-najw.onrender.com', 'https://newsapp-najw.onrender.com','https://radiant-naiad-e03ca9.netlify.app' 'https://674f013303f72c0008f3ec6c--radiant-naiad-e03ca9.netlify.app']
+ALLOWED_HOSTS = ['newsapp-najw.onrender.com','aboki-newsapp-8c7372ca5580.herokuapp.com', 'https://newsapp-najw.onrender.com','https://radiant-naiad-e03ca9.netlify.app' 'https://674f013303f72c0008f3ec6c--radiant-naiad-e03ca9.netlify.app']
 
 
 # Load the API key from environment variables
