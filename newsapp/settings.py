@@ -78,7 +78,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://674f013303f72c0008f3ec6c--radiant-naiad-e03ca9.netlify.app',
     'https://radiant-naiad-e03ca9.netlify.app',  # Your Netlify domain
-    'https://newsapp-najw.onrender.com',        # Your API's own domain
+    'https://aboki-newsapp-8c7372ca5580.herokuapp.com',        # Your API's own domain
 ]
 
 # Optional: Allow credentials if necessary
@@ -122,6 +122,7 @@ DATABASES = {
         default=os.getenv('DATABASE_URL'),
         conn_max_age=600,
         ssl_require=True
+        
     )
 }
 
