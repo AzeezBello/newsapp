@@ -21,6 +21,7 @@ class NewsCategorySerializer(serializers.ModelSerializer):
 
 
 class NewsArticleSerializer(TaggitSerializer, serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
     source = NewsSourceSerializer()
     categories = NewsCategorySerializer(many=True)
     tags = TagListSerializerField()  # Serialize tags as a list of strings
@@ -28,4 +29,7 @@ class NewsArticleSerializer(TaggitSerializer, serializers.ModelSerializer):
     class Meta:
         model = NewsArticle
         fields = '__all__'  # Include all fields, including tags
+    
+    def get_image_url(self, obj):
+        return obj.image.url if obj.image else None  # Return Cloudinary URL
 

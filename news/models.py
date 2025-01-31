@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 from taggit.managers import TaggableManager  # Import the TaggableManager for tagging
 
 class NewsSource(models.Model):
@@ -11,7 +12,7 @@ class NewsSource(models.Model):
 
 class NewsCategory(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='category_images/', blank=True, null=True)
+    image = CloudinaryField('image', blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -22,7 +23,7 @@ class NewsArticle(models.Model):
     author = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField()
     content = models.TextField()
-    image = models.ImageField(upload_to='images/', blank=True, null=True)
+    image = CloudinaryField('image', blank=True, null=True)
     categories = models.ManyToManyField(NewsCategory, related_name='articles')
     location = models.CharField(max_length=100, blank=True, null=True)
     published_at = models.DateTimeField(auto_now_add=True)
