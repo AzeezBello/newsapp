@@ -131,6 +131,14 @@ DATABASES = {
 }
 
 
+# we only need the engine name, as heroku takes care of the rest
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     }
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -213,7 +221,7 @@ cloudinary.config(
 )
 
 # Use Cloudinary for media file storage
-DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 
