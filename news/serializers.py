@@ -10,6 +10,7 @@ class NewsSourceSerializer(serializers.ModelSerializer):
 
 
 class NewsCategorySerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
     articles = serializers.PrimaryKeyRelatedField(
         many=True,
         read_only=True
@@ -17,7 +18,10 @@ class NewsCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NewsCategory
-        fields = ['id', 'name', 'image', 'articles']  # Added 'articles' to include related posts
+        fields = '__all__'  # Include all fields
+    
+    def get_image_url(self, obj):
+        return obj.image.url if obj.image else None  # Return Cloudinary URL
 
 
 class NewsArticleSerializer(TaggitSerializer, serializers.ModelSerializer):
